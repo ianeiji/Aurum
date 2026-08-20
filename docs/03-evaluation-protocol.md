@@ -24,6 +24,8 @@ Evaluation/Experiment面はBacktest、historical Replay、Shadow Trading、Demo/
 
 完全未使用期間で一度だけ主要評価を行う。net expectancy、PF、DD、cost耐性、regime別頑健性、baseline差と不確実性を確認する。
 
+OOS期間は単一ブロックとして使い切らず、OOS-A/OOS-B等の複数区間に分けて予約する。OOS-Aを見てstrategyを修正した場合、OOS-Aはdevelopment dataとして消費済み扱いにし、次の主要評価は未消費のOOS-Bで行う。同一OOS区間を見ては直し見ては直しを繰り返すと、OOS自体が事実上のdevelopment dataとなり評価そのものが過学習する。
+
 ### 4. Demo forward
 
 十分な期間とtrade数を事前に設定し、実時間のspread、slippage相当、遅延、API障害、再起動、reconciliationを検証する。shadow baseline/challengerを並走させる。
@@ -34,7 +36,7 @@ Evaluation/Experiment面はBacktest、historical Replay、Shadow Trading、Demo/
 
 ## 事前に固定する項目
 
-- 対象symbol/timeframe/期間とsplit境界
+- 対象symbol/timeframe/期間とsplit境界（OOS-A/OOS-B等の予約区間を含む）
 - strategy/model/prompt/risk/data version
 - cost/slippage仮定とstress条件
 - primary/secondary metrics

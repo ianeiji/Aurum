@@ -76,4 +76,5 @@
 - news/text feature generator
 - regime-aware routing
 - 複数model challenger
+- Edge Monitor（独立コンポーネント化）: 現状02-safety.mdの「昇格とロールバック」と03-evaluation-protocol.mdの「Production劣化検知」に分散しているrolling PF/expectancy/regime別成績の監視とStrategy停止・shadow降格判断を、Risk Engineとは別の専任コンポーネントとして切り出す
 - VPS/冗長化、必要性を確認後にEA併用を再判断
