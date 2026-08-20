@@ -3,8 +3,19 @@ name = "aurum"
 version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "asyncpg>=0.31.0",
+    "metatrader5>=5.0.6090",
+    "pydantic-settings>=2.15.0",
+]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.3",
+]
