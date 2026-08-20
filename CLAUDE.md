@@ -62,3 +62,10 @@
 
 - type / scope: 英語
 - description: 日本語
+
+## Branch and PR Convention
+
+ブランチ運用とPRは `BRANCH_AND_PR_CONVENTION.md` に従うこと。
+
+- Issue単位でブランチを切りPRを作成する
+- Risk Engine等の安全性が絡む変更は「変更時チェック」をPRで確認する

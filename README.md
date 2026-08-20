@@ -30,3 +30,4 @@ FX/貴金属向けの、自動売買・戦略評価・対話型売買支援を�
 - [運用・LLMコスト方針](docs/06-operations-and-llm-cost.md)
 - [Claude向け開発規約](CLAUDE.md)
 - [コミット規約](COMMIT_CONVENTION.md)
+- [ブランチ・PR運用](BRANCH_AND_PR_CONVENTION.md)
