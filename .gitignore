@@ -38,3 +38,6 @@ Thumbs.db
 # Local DB
 *.db
 *.sqlite3
+
+# Local scratch todo (not synced via git)
+TODO.md
